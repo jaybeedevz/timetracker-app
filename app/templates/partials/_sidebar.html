@@ -4,15 +4,89 @@
   <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading">My Health  </div>
     <div class="list-group list-group-flush">
-      <a href="{% url 'smne' %}" class="list-group-item list-group-item-action bg-light">SM North Edsa</a>
-      <a href="{% url 'shang' %}" class="list-group-item list-group-item-action bg-light">Shangrila Plaza</a>
-      <a href="{% url 'rpm' %}" class="list-group-item list-group-item-action bg-light">Robinson Place Manila</a>
-      <a href="{% url 'filomena' %}" class="list-group-item list-group-item-action bg-light">Filomena</a>
-      <a href="{% url 'venice' %}" class="list-group-item list-group-item-action bg-light">Venice</a>
-      <a href="{% url 'dd' %}" class="list-group-item list-group-item-action bg-light">Double Dragon</a>
-      <a href="{% url 'alabang' %}" class="list-group-item list-group-item-action bg-light">Alabang</a>
-      <a href="{% url 'cybergate' %}" class="list-group-item list-group-item-action bg-light">Cybergate Cebu</a>
-      <a href="{% url 'galleria' %}" class="list-group-item list-group-item-action bg-light">Galleria Cebu</a>
+
+      <a href="{% url 'smne' %}" 
+        {% if '/smne' == request.path %}
+          class="list-group-item list-group-item-action bg-light active"
+        {% else %}
+        class="list-group-item list-group-item-action bg-light"
+        {% endif %}
+        >SM North Edsa
+      </a>
+
+      <a href="{% url 'shang' %}" 
+        {% if '/shang' == request.path %}
+          class="list-group-item list-group-item-action bg-light active"
+        {% else %}
+          class="list-group-item list-group-item-action bg-light"
+        {% endif %}
+        >Shangrila Plaza
+      </a>
+
+      <a href="{% url 'rpm' %}" 
+        {%if '/rpm' == request.path %}
+          class="list-group-item list-group-item-action bg-light active"
+        {%else %}
+          class="list-group-item list-group-item-action bg-light"
+        {% endif %}
+        >Robinson Place Manila
+      </a>
+
+      <a href="{% url 'filomena' %}"
+        {% if '/filomena' == request.path %}
+          class="list-group-item list-group-item-action bg-light active"
+        {% else %}
+          class="list-group-item list-group-item-action bg-light"
+        {% endif %}
+      >Filomena
+      </a>
+
+      <a href="{% url 'venice' %}"
+        {% if '/venice' == request.path %}
+          class="list-group-item list-group-item-action bg-light active"
+        {% else %}
+         class="list-group-item list-group-item-action bg-light"
+        {% endif %}
+      >Venice
+      </a>
+
+      <a href="{% url 'dd' %}"
+        {% if '/dd' == request.path %}
+          class="list-group-item list-group-item-action bg-light active"
+        {% else %}
+        class="list-group-item list-group-item-action bg-light"
+        {% endif %}
+      >Double Dragon
+      </a>
+
+      <a href="{% url 'alabang' %}"
+        {% if '/alabang' == request.path %}
+          class="list-group-item list-group-item-action bg-light active"
+        {% else %}
+        class="list-group-item list-group-item-action bg-light"
+        {% endif %}
+      >Alabang
+      </a>
+
+      <a href="{% url 'cybergate' %}"
+        {% if '/cybergate' == request.path %}
+          class="list-group-item list-group-item-action bg-light active"
+        {% else %}
+        class="list-group-item list-group-item-action bg-light"
+        {% endif %}
+      >Cybergate Cebu
+      </a>
+      
+      <a href="{% url 'galleria' %}"
+        {% if '/galleria' == request.path %}
+          class="list-group-item list-group-item-action bg-light active"
+        {% else %}
+        class="list-group-item list-group-item-action bg-light"
+        {% endif %}
+      >Galleria Cebu
+      </a>
+     
+      
     </div>
   </div>
   <!-- /#sidebar-wrapper -->

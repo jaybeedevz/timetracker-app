@@ -32,6 +32,13 @@
   #wrapper.toggled #sidebar-wrapper {
     margin-left: 0;
   }
+
+  .list-group-item.active {
+    z-index: 2;
+    color: #46bbce;
+    background-color: #007bff;
+    border-color: #092441;
+}
   
   @media (min-width: 768px) {
     #sidebar-wrapper {
