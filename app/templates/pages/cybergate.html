@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+
+{% block content%}
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">   
+      <section class="container py-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Robinson Cybergate</h2>
+                <ul id="tabsJustified" class="nav nav-pills">
+                    <li class="nav-item"><a href="" data-target="#mon" data-toggle="tab" class="nav-link small text-uppercase">Monday</a></li>
+                    <li class="nav-item"><a href="" data-target="#tue" data-toggle="tab" class="nav-link small text-uppercase">Tuesday</a></li>
+                    <li class="nav-item"><a href="" data-target="#wed" data-toggle="tab" class="nav-link small text-uppercase">Wenesday</a></li>
+                    <li class="nav-item"><a href="" data-target="#thur" data-toggle="tab" class="nav-link small text-uppercase">Thursday</a></li>
+                    <li class="nav-item"><a href="" data-target="#fri" data-toggle="tab" class="nav-link small text-uppercase">Friday</a></li>
+                    <li class="nav-item"><a href="" data-target="#sat" data-toggle="tab" class="nav-link small text-uppercase">Saturday</a></li>
+                    <li class="nav-item"><a href="" data-target="#sun" data-toggle="tab" class="nav-link small text-uppercase">Sunday</a></li>
+                </ul>
+                <br>
+                <div id="tabsJustifiedContent" class="tab-content">
+                    <div id="mon" class="tab-pane fade">
+                        <div class="container">
+                          <div id="accordion" class="accordion">
+                              <div class="card mb-0">
+                                  <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                                      <a class="card-title">
+                                          Family Medicine
+                                      </a>
+                                  </div>
+                                  <div id="collapseOne" class="card-body collapse" data-parent="#accordion" >
+                                    <div class="container">
+                                      <h5 class="section-title h1">Family Medicine</h5>
+                                      <div class="row">
+                                          <!-- Team member -->
+                                          <div class="col-xs-12 col-sm-6 col-md-4">
+                                              <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                                                  <div class="mainflip">
+                                                      <div class="frontside">
+                                                          <div class="card">
+                                                              <div class="card-body text-center">
+                                                                  <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
+                                                                  <h4 class="card-title">Dr. Emma Joey Tapat</h4>
+                                                                  <p class="card-text">8:00AM - 2:00PM</p>
+                                                                  <span class="badge badge-success">On Going</span>
+                                                              </div>
+                                                          </div>
+                                                        </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <!-- ./Team member --> 
+                                          <!-- Team member -->
+                                          <div class="col-xs-12 col-sm-6 col-md-4">
+                                            <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                                                <div class="mainflip">
+                                                    <div class="frontside">
+                                                        <div class="card">
+                                                            <div class="card-body text-center">
+                                                                <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
+                                                                <h4 class="card-title">Sunlimetech</h4>
+                                                                <p class="card-text">8:00AM - 2:00PM</p>
+                                                                <span class="badge badge-primary">Comming</span>
+                                                            </div>
+                                                        </div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- ./Team member --> 
+                                        <!-- Team member -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4">
+                                          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                                              <div class="mainflip">
+                                                  <div class="frontside">
+                                                      <div class="card">
+                                                          <div class="card-body text-center">
+                                                              <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
+                                                              <h4 class="card-title">Sunlimetech</h4>
+                                                              <p class="card-text">8:00AM - 2:00PM</p>
+                                                              <span class="badge badge-danger">Not Comming</span>
+                                                          </div>
+                                                      </div>
+                                                    </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <!-- ./Team member --> 
+                                      </div>
+                                  </div>
+                                  </div>
+                                  <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                      <a class="card-title">
+                                        Item 2
+                                      </a>
+                                  </div>
+                                  <div id="collapseTwo" class="card-body collapse" data-parent="#accordion" >
+                                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                          aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                          craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                      </p>
+                                  </div>
+                                  <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                      <a class="card-title">
+                                        Item 3
+                                      </a>
+                                  </div>
+                                  <div id="collapseThree" class="collapse" data-parent="#accordion" >
+                                      <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                          aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore sustainable VHS.
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div id="tue" class="tab-pane fade">
+                        <div class="row pb-2">
+                            <div class="col-md-7">
+                                <p>Tabs can be used to contain a variety of content &amp; elements. They are a good way to group <a href="" class="link">relevant content</a>. Display initial content in context to the user. Enable the user to flow through
+                                    <a href="" class="link">more</a> information as needed.
+                                </p>
+                            </div>
+                            <div class="col-md-5"><img src="//dummyimage.com/1005x559.png/5fa2dd/ffffff" class="float-right img-fluid img-rounded"></div>
+                        </div>
+                    </div>
+                    <div id="wed" class="tab-pane fade">
+                        <div class="list-group"><a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">44</span> Message 1</a> <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">8</span> Message 2</a>                            <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">23</span> Message 3</a> <a href="" class="list-group-item d-inline-block text-muted">Message n..</a></div>
+                    </div>
+                    <div id="thur" class="tab-pane fade">
+                      <div class="list-group"><a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">44</span> Message 1</a> <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">8</span> Message 2</a>                            <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">23</span> Message 3</a> <a href="" class="list-group-item d-inline-block text-muted">Message n..</a></div>
+                  </div>
+                  <div id="fri" class="tab-pane fade">
+                    <div class="list-group"><a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">44</span> Message 1</a> <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">8</span> Message 2</a>                            <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">23</span> Message 3</a> <a href="" class="list-group-item d-inline-block text-muted">Message n..</a></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+  
+{% endblock %}
