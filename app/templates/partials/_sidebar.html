@@ -86,6 +86,14 @@
       >Galleria Cebu
       </a>
      
+      <a href="#"
+        {% if '/galleria' == request.path %}
+          class="list-group-item list-group-item-action bg-light active"
+        {% else %}
+        class="list-group-item list-group-item-action bg-light"
+        {% endif %}
+      >Others
+      </a>
       
     </div>
   </div>
