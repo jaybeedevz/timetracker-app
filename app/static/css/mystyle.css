@@ -53,4 +53,8 @@
     #wrapper.toggled #sidebar-wrapper {
       margin-left: -15rem;
     }
+    .card-horizontal {
+      display: flex;
+      flex: 1 1 auto;
+   }
   }
