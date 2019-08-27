@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import datetime
 from django.contrib.postgres.fields import ArrayField
 from branches.models import Specialization
 from branches.models import Clinic
@@ -106,6 +105,3 @@ class Schedule(models.Model):
     schedule_time_in =     models.CharField(max_length=60, choices=SCHEDULE_TIME_IN_CHOICES, null=True)
     schedule_time_out =    models.CharField(max_length=60, choices=SCHEDULE_TIME_OUT_CHOICES, null=True)
     physician =            models.ForeignKey(Physician, on_delete=models.CASCADE, related_name='physicians')
-
-    def __str__(self):
-        return "%s %s" % (self.physician.first_name, self.physician.last_name)
