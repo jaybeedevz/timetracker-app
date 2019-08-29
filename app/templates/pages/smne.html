@@ -52,108 +52,62 @@
                 <div id="tabsJustifiedContent" class="tab-content">
                     <div id="mon" class="tab-pane fade">
                         <div class="container">
-                          <div id="accordion" class="accordion">
-                              <div class="accordion" id="accordionExample">
-                                  <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                      <h2 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <table class="table table-responsive-sm table-hover table-outline mb-0">
-                                                <thead class="thead-light">
-                                                  <tr>
-                                                    <th class="text-center">
-                                                      <i class="icon-people"></i>
-                                                    </th>
-                                                      <th>NAME OF DOCTORS</th>
-                                                      <th>SPECIALIZATION</th>
-                                                      <th>SCHEDULE</th>
-                                                      <th>STATUS</th>
-                                                      <th>BRANCH</th>
-                                                  </tr>
-                                                </thead>
-                                                <tbody>
-                                                    {% if physicians  %}
-                                                      {% for physician in physicians %}
-                                                      <tr>
-                                                        <td class="text-center">
-                                                            <div class="avatar">
-                                                              <img class="img-avatar" style="height: 50px"  src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1" alt="admin@bootstrapmaster.com">
-                                                              <span class="avatar-status badge-success"></span>
-                                                            </div>
-                                                          </td>
-                                                          <td>
-                                                            <div>{{ physician.first_name}} {{physician.last_name}}</div>
-                                                          </td>
-                                              
-                                                          <td>
-                                                            <div> {{physician.specialization}} </div>
-                                                          </td>
-                                                          <td>
-                                                            
-                                                            <div>{{ schedule.schedule_day}}</div>
-                                                            <div class="small text-muted">8:00AM - 5:00PM</div>
-                                                              
-                                      
-                                                          </td>
-                                                          <td>  
-                                                              <span class="badge badge-success">{{ physician.status }}</span>
-                                                          </td>
-                                                          <td>
-                                                              <div>{{ physician.clinic }}</div>
-                                                          </td>
-                                                      </tr>
-                                                      
-                                                      {% endfor %}
-                                                    {% else %}
-                                      
-                                                      <div class="col-md-12">
-                                                        <P>No physicians available</P>
-                                                      </div>
-                                      
-                                                    {% endif %}
-                                              
-                                                </tbody>
-                                              </table>
-                                        </button>
-                                      </h2>
-                                    </div>
-                                
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                      </div>
-                                    </div>
+                          <table class="table table-responsive-sm table-hover table-outline mb-0">
+                            <thead class="thead-light">
+                              <tr>
+                                <th class="text-center">
+                                  <i class="icon-people"></i>
+                                </th>
+                                  <th>NAME OF DOCTORS</th>
+                                  <th>SPECIALIZATION</th>
+                                  <th>SCHEDULE</th>
+                                  <th>STATUS</th>
+                                  <th>BRANCH</th>
+                              </tr>
+                            </thead>
+                            <tbody></tbody>
+                                {% if smne_physicians %}
+                                  {% for physician in smne_physicians %}
+                                  <tr>
+                                    <td class="text-center">
+                                        <div class="avatar">
+                                          <img class="img-avatar" style="height: 50px"  src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1" alt="admin@bootstrapmaster.com">
+                                          <span class="avatar-status badge-success"></span>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div>{{ physician.first_name}} {{physician.last_name}}</div>
+                                      </td>
+                          
+                                      <td>
+                                        <div> {{physician.specialization}} </div>
+                                      </td>
+                                      <td>
+                                        
+                                        <div>{{ schedules.schedule_day}}</div>
+                                        <div class="small text-muted">8:00AM - 5:00PM</div>
+                                          
+                  
+                                      </td>
+                                      <td>  
+                                          <span class="badge badge-success">{{ physician.status }}</span>
+                                      </td>
+                                      <td>
+                                          <div>{{ physician.clinic }}</div>
+                                      </td>
+                                  </tr>
+                                  
+                                  {% endfor %}
+                                {% else %}
+                  
+                                  <div class="col-md-12">
+                                    <P>No physicians available</P>
                                   </div>
-                                  <div class="card">
-                                    <div class="card-header" id="headingTwo">
-                                      <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                          Collapsible Group Item #2
-                                        </button>
-                                      </h2>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                      <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                          Collapsible Group Item #3
-                                        </button>
-                                      </h2>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                          </div>
+                  
+                                {% endif %}
+                          
+                            </tbody>
+                          </table>
                         </div>
                     </div>
                     <div id="tue" class="tab-pane fade">
