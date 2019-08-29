@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+
 {% block content%}
   <!-- Page Content -->
   <div id="page-content-wrapper">
@@ -42,99 +43,19 @@
           <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
         </div>
 
-        <!-- Content Row -->
-        <div class="row">
-
-          <!-- Earnings (Monthly) Card Example -->
-          <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Family Medicine</div>
-                    <div class="h5 mb-0 font-weight-bold text-gray-800">20</div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Earnings (Monthly) Card Example -->
-          <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-success shadow h-100 py-2">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Rehab Medicine</div>
-                    <div class="h5 mb-0 font-weight-bold text-gray-800">50</div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Earnings (Monthly) Card Example -->
-          <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">ENT</div>
-                    <div class="row no-gutters align-items-center">
-                      <div class="col-auto">
-                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">10</div>
-                      </div>
-                      <div class="col">
-                        <div class="progress progress-sm mr-2">
-                          <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pending Requests Card Example -->
-          <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-warning shadow h-100 py-2">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">OB-Gyne</div>
-                    <div class="h5 mb-0 font-weight-bold text-gray-800">12 <span class="badge badge-success ">On Going</span></div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas fa-comments fa-2x text-gray-300"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="card-group mb-4">
             <div class="card">
-            <div class="card-body">
-            <div class="h1 text-muted text-right mb-4">
-            <i class="icon-people"></i>
-            </div>
-            <div class="text-value">10</div>
-            <small class="text-muted text-uppercase font-weight-bold">Pulmonology</small>
-            <div class="progress progress-xs mt-3 mb-0">
-            <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            </div>
+              <div class="card-body">
+                <div class="h1 text-muted text-right mb-4">
+                  <i class="icon-people"></i>
+                </div>
+                <div class="text-value">10</div>
+                  <small class="text-muted text-uppercase font-weight-bold">Pulmonology</small>
+                  <div class="progress progress-xs mt-3 mb-0">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
             </div>
             <div class="card">
             <div class="card-body">
@@ -190,61 +111,56 @@
           <thead class="thead-light">
             <tr>
               <th class="text-center">
-              <i class="icon-people"></i>
+                <i class="icon-people"></i>
               </th>
-              <th>NAME OF DOCTORS</th>
-              <th>SPECIALIZATION</th>
-              <th>STATUS</th>
-              <th>BRANCH</th>
+                <th>NAME OF DOCTORS</th>
+                <th>SPECIALIZATION</th>
+                <th>SCHEDULE</th>
+                <th>STATUS</th>
+                <th>BRANCH</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-            <td class="text-center">
-              <div class="avatar">
-              <img class="img-avatar" style="height: 50px"  src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1" alt="admin@bootstrapmaster.com">
-              <span class="avatar-status badge-success"></span>
-              </div>
-            </td>
-            <td>
-              <div>Yiorgos Avraamu</div>
-              <div class="small text-muted">
-              8:00AM - 5:00PM</div>
-            </td>
+              {% if physicians and schedules %}
+                {% for physician in physicians %}
+                <tr>
+                  <td class="text-center">
+                      <div class="avatar">
+                        <img class="img-avatar" style="height: 50px"  src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1" alt="admin@bootstrapmaster.com">
+                        <span class="avatar-status badge-success"></span>
+                      </div>
+                    </td>
+                    <td>
+                      <div>{{ physician.first_name}} {{physician.last_name}}</div>
+                    </td>
+        
+                    <td>
+                      <div> {{physician.specialization}} </div>
+                    </td>
+                    <td>
+                      
+                      <div>{{ schedule.schedule_day}}</div>
+                      <div class="small text-muted">8:00AM - 5:00PM</div>
+                        
 
-            <td>
-              <div>Internal Medicine</div>
-            </td>
-            <td>
-                <span class="badge badge-success">On Going</span>
-            </td>
-            <td>
-                <div>Alabang</div>
-            </td>
-            </tr>
-            <tr>
-                <td class="text-center">
-                  <div class="avatar">
-                    <img class="img-avatar" style="height: 50px"  src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1" alt="admin@bootstrapmaster.com">
-                    <span class="avatar-status badge-success"></span>
-                  </div>
-                </td>
-                <td>
-                  <div>Yiorgos Avraamu</div>
-                  <div class="small text-muted">
-                  8:00AM - 5:00PM</div>
-                </td>
-    
-                <td>
-                  <div>Internal Medicine</div>
-                </td>
-                <td>
-                    <span class="badge badge-success">On Going</span>
-                </td>
-                <td>
-                    <div>Alabang</div>
-                </td>
-             </tr>
+                    </td>
+                    <td>  
+                        <span class="badge badge-success">{{ physician.status }}</span>
+                    </td>
+                    <td>
+                        <div>{{ physician.clinic }}</div>
+                    </td>
+                </tr>
+                
+                {% endfor %}
+              {% else %}
+
+                <div class="col-md-12">
+                  <P>No physicians available</P>
+                </div>
+
+              {% endif %}
+        
           </tbody>
         </table>
 

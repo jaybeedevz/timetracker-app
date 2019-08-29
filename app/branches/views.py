@@ -1,8 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from doctors.models import Physician
+from doctors.models import Schedule
+
 def index(request):
-    return render(request, 'pages/index.html')
+
+    physicians = Physician.objects.all()
+    schedules = Schedule.objects.all()
+
+    context = {
+        'physicians': physicians,
+        'schedules': schedules
+    }
+    return render(request, 'pages/index.html', context)	    
+
 
 def smne(request):
     return render(request, 'pages/smne.html')
